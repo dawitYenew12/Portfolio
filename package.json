@@ -12,7 +12,8 @@
   "dependencies": {
     "maath": "^0.10.8",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-globe.gl": "^2.27.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
