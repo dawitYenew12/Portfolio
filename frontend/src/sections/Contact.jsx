@@ -9,8 +9,9 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = ({name, value}) => {
-    setForm({...form, [name]: value});
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setForm((prevForm) => ({...prevForm, [name]: value}));
   };
 
   const handleSubmit = () => {};
