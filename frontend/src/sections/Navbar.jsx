@@ -29,9 +29,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-5 mx-auto c-space">
           <a
             href="/"
-            className="text-neutral-400 font-bld text-xl hover:text-white transition-colors"
+            className="text-neutral-400 font-bld text-xl hover:text-green-300 transition-colors"
           >
-            dave
+            <span className="text-green-300">D</span>awit.Y
           </a>
           <button
             onClick={toggleMenu}

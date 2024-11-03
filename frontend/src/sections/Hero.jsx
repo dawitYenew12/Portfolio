@@ -12,6 +12,7 @@ import Cube from "../components/Cube";
 import ReactLogo from "../components/ReactLogo";
 import HeroCamera from "../components/HeroCamera";
 import Button from "../components/Button";
+import NodejsIcon from "../components/NodejsIcon";
 
 // import { Leva } from "leva";
 
@@ -50,9 +51,9 @@ function Hero() {
               <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
               <Cube position={sizes.cubePosition} />
-              <Rings position={sizes.ringPosition} />
+              <NodejsIcon position={sizes.nodejsPosition}/>
             </group>
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={1} />
             <directionalLight intensity={0.5} position={[10, 10, 10]} />
           </Suspense>
         </Canvas>

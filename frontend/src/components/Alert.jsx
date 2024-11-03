@@ -4,7 +4,7 @@ const Alert = ({ type, text }) => {
       <div className="fixed top-6 right-6 z-50">
         <div className="flex w-full text-indigo-100 leading-none rounded-lg flex lg:inline-flex p-5">
           <div
-            className={`flex items-center justify-center ${type === "danger" ? "bg-red" : "bg-green-800"} p-1.5 rounded-l-sm`}
+            className={`flex items-center justify-center ${type === "danger" ? "bg-red-900" : "bg-green-900"} p-1.5 rounded-l-sm`}
             style={{ flex: '0 0 6px' }} 
           />
           <div className="border-l border-gray-300" style={{ width: "1px" }} />
