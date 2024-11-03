@@ -6,10 +6,8 @@ import Alert from "../components/Alert.jsx";
 
 const Contact = () => {
   const formRef = useRef();
-
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
-
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const handleChange = ({ target: { name, value } }) => {
@@ -20,8 +18,8 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    await emailjs
-      .send(
+    try {
+      await emailjs.send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         {
@@ -32,36 +30,28 @@ const Contact = () => {
           message: form.message,
         },
         import.meta.env.VITE_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          showAlert({
-            show: true,
-            text: "Thank you for your message 😃",
-            type: "success",
-          });
-
-          setTimeout(() => {
-            hideAlert(false);
-            setForm({
-              name: "",
-              email: "",
-              message: "",
-            });
-          }, [3000]);
-        }).catch(
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          showAlert({
-            show: true,
-            text: "I didn't receive your message 😢",
-            type: "danger",
-          });
-        }
       );
+
+      setLoading(false);
+      showAlert({
+        text: "Thank you for your message 😃",
+        type: "success",
+      });
+
+      setTimeout(() => {
+        hideAlert();
+        formRef.current.reset();
+      }, 3000);
+
+    } catch (error) {
+      setLoading(false);
+      console.error(error);
+
+      showAlert({
+        text: "I didn't receive your message 😢",
+        type: "danger",
+      });
+    }
   };
 
   return (
@@ -97,6 +87,7 @@ const Contact = () => {
                 required
                 className="field-input"
                 placeholder="ex., John Doe"
+                disabled={loading}
               />
             </label>
 
@@ -110,6 +101,7 @@ const Contact = () => {
                 required
                 className="field-input"
                 placeholder="ex., johndoe@gmail.com"
+                disabled={loading}
               />
             </label>
 
@@ -123,6 +115,7 @@ const Contact = () => {
                 rows={5}
                 className="field-input"
                 placeholder="Share your thoughts or inquiries..."
+                disabled={loading}
               />
             </label>
 
