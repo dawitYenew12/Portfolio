@@ -7,7 +7,7 @@ const Alert = ({ type, text }) => {
             className={`flex items-center justify-center ${type === "danger" ? "bg-red-900" : "bg-green-900"} p-1.5 rounded-l-sm`}
             style={{ flex: '0 0 6px' }} 
           />
-          <div className="border-l border-gray-300" style={{ width: "1px" }} />
+          {/* <div className="border-l border-gray-300" style={{ width: "1px" }} /> */}
           <div className="flex items-center justify-center bg-white p-4 rounded-r-sm" style={{ flex: '1' }}>
             <p className="text-black text-sm">{text}</p>
           </div>

@@ -1,6 +1,5 @@
-import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-
+import axios from "axios";
 import useAlert from "../hooks/useAlert.js";
 import Alert from "../components/Alert.jsx";
 
@@ -15,44 +14,40 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     setLoading(true);
-
-    try {
-      await emailjs.send(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Dawit",
-          from_email: form.email,
-          to_email: import.meta.env.VITE_TO_EMAIL,
-          message: form.message,
-        },
-        import.meta.env.VITE_PUBLIC_KEY
-      );
-
-      setLoading(false);
+  
+    const handleResponse = (message, type) => {
       showAlert({
-        text: "Thank you for your message 😃",
-        type: "success",
+        text: message,
+        type: type,
       });
-
       setTimeout(() => {
         hideAlert();
-        formRef.current.reset();
       }, 3000);
-
-    } catch (error) {
-      setLoading(false);
-      console.error(error);
-
-      showAlert({
-        text: "I didn't receive your message 😢",
-        type: "danger",
+    };
+  
+    try {
+      const response = await axios.post('http://localhost:3000/api/contact', form, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
+  
+      if (response.status === 200) {
+        handleResponse("Thank you for your message 😃", "success");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        handleResponse("I didn't receive your message 😢", "danger");
+      }
+    } catch (error) {
+      console.error(error);
+      handleResponse("I didn't receive your message 😢", "danger");
+    } finally {
+      setLoading(false);
     }
   };
+  
 
   return (
     <section className="c-space my-20" id="contact">
