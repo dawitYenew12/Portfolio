@@ -24,19 +24,19 @@ export const navLinks = [
   export const clientReviews = [
     {
       id: 1,
-      name: 'Emily Johnson',
-      position: 'Marketing Director at GreenLeaf',
+      name: 'Walta',
+      position: 'CEO of walta technologies',
       img: 'assets/review1.png',
       review:
-        'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+        'Working with Dawit on our eCommerce platform was a great experience. He delivered a fast, secure, and scalable solution using Node.js, React, and MongoDB. The integration with Chapa for payments was seamless, and the platform’s performance has exceeded expectations. Highly recommend Dawit for any web development needs!',
     },
     {
       id: 2,
-      name: 'Mark Rogers',
-      position: 'Founder of TechGear Shop',
+      name: 'Edmealem Ejigu',
+      position: 'Founder and CEO of Edmealem Ejigu Bussiness group',
       img: 'assets/review2.png',
       review:
-        'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
+        'Working with Dawit on our logistics management system has been a game-changer for our business. The platform is intuitive, reliable, and has significantly improved our operations. Dawit understood our needs perfectly and delivered an efficient solution. Highly recommended!',
     },
     {
       id: 3,
@@ -58,11 +58,11 @@ export const navLinks = [
   
   export const myProjects = [
     {
-      title: 'Podcastr - AI Podcast Platform',
-      desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+      title: 'Web based Ecommerce',
+      desc: 'eCommerce platform offers a seamless shopping experience for customers, enabling them to browse a wide range of products and securely make purchases. With an intuitive interface, advanced search features, and secure payment processing, the platform is designed to optimize both the user experience and business operations. Admins can easily manage inventory, track sales, and offer promotions, while customers enjoy a personalized, convenient shopping journey from start to finish.',
       subdesc:
-        'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-      href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+        'Built as a unique Software-as-a-Service (SaaS) app with Node.js, React, MongoDB, Express.js, and Chapa as payment processing',
+      // href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
       texture: '/textures/project/project1.mp4',
       logo: '/assets/project-logo1.png',
       logoStyle: {
@@ -99,7 +99,7 @@ export const navLinks = [
       desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
       subdesc:
         'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-      href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+      // href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
       texture: '/textures/project/project2.mp4',
       logo: '/assets/project-logo2.png',
       logoStyle: {
@@ -132,8 +132,8 @@ export const navLinks = [
       ],
     },
     {
-      title: 'CarePulse - Health Management System',
-      desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+      title: 'Missing Individul Finder',
+      desc: 'The Missing Individual Finder uses advanced NLP models like all-MiniLM-L6-v2 to match descriptions of missing persons with existing records. By analyzing shared characteristics and circumstances, it quickly identifies potential matches in a large database. This tool enhances the speed and accuracy of locating missing individuals, aiding law enforcement and organizations in their search efforts.',
       subdesc:
         'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
       href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
@@ -174,8 +174,8 @@ export const navLinks = [
       title: 'Horizon - Online Banking Platform',
       desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
       subdesc:
-        'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-      href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+        `The Missing Individual Finder uses Node.js for the backend, React for the frontend, MongoDB for data storage, and Hugging Face's all-MiniLM-L6-v2 for fine-tuned NLP-based description matching.`,
+      // href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
       texture: '/textures/project/project4.mp4',
       logo: '/assets/project-logo4.png',
       logoStyle: {
